@@ -43,8 +43,7 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
         xxlJobScheduler.destroy();
     }
 
-
-    // ---------------------- XxlJobScheduler ----------------------
+// ---------------------- XxlJobScheduler ----------------------
 
     // conf
     @Value("${xxl.job.i18n}")
@@ -64,6 +63,9 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
 
     @Value("${xxl.job.logretentiondays}")
     private int logretentiondays;
+
+    @Value("${xxl.job.alert.mail.enable}")
+    private boolean alertMailEnable;
 
     // dao, service
 
@@ -114,6 +116,10 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
             return -1;  // Limit greater than or equal to 7, otherwise close
         }
         return logretentiondays;
+    }
+
+    public boolean isAlertMailEnable() {
+        return alertMailEnable;
     }
 
     public XxlJobLogDao getXxlJobLogDao() {

@@ -26,7 +26,7 @@ public interface AdminBiz {
     // ---------------------- registry ----------------------
 
     /**
-     * registry
+     * registry & renew
      *
      * @param registryParam
      * @return
