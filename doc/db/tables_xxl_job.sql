@@ -62,7 +62,6 @@ CREATE TABLE `xxl_job_log_report` (
   `running_count` int(11) NOT NULL DEFAULT '0' COMMENT '运行中-日志数量',
   `suc_count` int(11) NOT NULL DEFAULT '0' COMMENT '执行成功-日志数量',
   `fail_count` int(11) NOT NULL DEFAULT '0' COMMENT '执行失败-日志数量',
-  `update_time` datetime DEFAULT NULL,
   `add_time` datetime DEFAULT NULL,
   `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
